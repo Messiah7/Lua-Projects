@@ -42,9 +42,9 @@ end
 function addBars()
     cpus = me.getCraftingCPUs()
     for i=1, #cpus do
-        x = 3*i
+        x = 5*i
         full = (cpus[i].storage/65536) + cpus[i].coProcessors
-        bars.add(""..i,"ver", full, cpus[i].coProcessors, 1+x, 5, 2, monY - 16, colors.purple, colors.lightBlue)
+        bars.add(""..i,"ver", full, cpus[i].coProcessors, -1+x, 5, 4, monY - 16, colors.purple, colors.lightBlue)
         mon.setCursorPos(x+1, monY - 11)
         --mon.write(string.format(i))
     end
@@ -106,8 +106,8 @@ end
 
 function updateStats()
     clear(3,monX - 3,monY - 5,monY - 2)
-    print("CPUs: ".. data.cpus)
-    print("busy: ".. data.crafting)
+    --print("CPUs: ".. data.cpus)
+    --print("busy: ".. data.crafting)
     mon.setCursorPos(4,monY-6)
     mon.write("CPUs: ".. data.cpus)
     mon.setCursorPos(4,monY-5)
@@ -150,8 +150,25 @@ while true do
             data.bytesUsed = data.bytesUsed + v.storage
             data.crafting = data.crafting+1
         end
+        
+-- What a mess, but it works, so i won't change
+        cpuBusy = me.getCraftingCPUs()
+        for i=1, #cpuBusy do
+            x = 5*i
+            full = (cpuBusy[i].storage/65536) + cpuBusy[i].coProcessors
+            if cpuBusy[i].isBusy == true then
+                bars.add(""..i,"ver", full, cpuBusy[i].coProcessors, -1+x, 5, 4, monY - 16, colors.red, colors.red)
+            else
+                bars.add(""..i,"ver", full, cpuBusy[i].coProcessors, -1+x, 5, 4, monY - 16, colors.green, colors.green)
+            end
+            mon.setCursorPos(x+1, monY - 11)
+        end
+        bars.construct(mon)
+        bars.screen()
+-- end of mess
+        
         -- print(i, v.coProcessors, v.isBusy, v.storage/65536)
     end
     updateStats()
-    sleep(2)
+    sleep(1)
 end
