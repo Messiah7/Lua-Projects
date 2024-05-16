@@ -34,7 +34,7 @@ end
 
 function screen()
     for name, data in pairs(bar) do
-        print("bar: " .. name)
+        --print("bar: " .. name)
         fill(data)
     end
 end
@@ -65,7 +65,7 @@ function fill(data)
     local mode = data["typ"]
     local emptyColor = data["clempty"]
     local fillColor = data["clfill"]
-    print("current: " .. current)
+    --print("current: " .. current)
     local totalLength = maxX - minX
     local fillLength = math.floor((totalLength * current) / 100)
 
