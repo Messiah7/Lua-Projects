@@ -6,9 +6,9 @@
         version = "1.0.0",
         startup = "shell.run('mecpus/mecpus.lua')",
         files = {
-            {link="https://raw.githubusercontent.com/Seniorendi/Lua-Projects/master/src/ME%20Cpus/mecpus.cfg", name = "cfg", type = "config"},
-            {link="https://raw.githubusercontent.com/Seniorendi/Lua-Projects/master/src/ME%20Cpus/mecpus.lua", name = "mecpus.lua", type = "program"},
-            {link="https://raw.githubusercontent.com/Seniorendi/Lua-Projects/master/src/api/bars.lua", name = "bars.lua", type = "api"},
+            {link="https://raw.githubusercontent.com/Messiah7/Lua-Projects/master/src/ME%20Cpus/mecpus.cfg", name = "cfg", type = "config"},
+            {link="https://raw.githubusercontent.com/Messiah7/Lua-Projects/master/src/ME%20Cpus/mecpus.lua", name = "mecpus.lua", type = "program"},
+            {link="https://raw.githubusercontent.com/Messiah7/Lua-Projects/master/src/api/bars.lua", name = "bars.lua", type = "api"},
         },
         needs = {
             monitor = true,
@@ -22,7 +22,7 @@
         version = "1.0.0",
         startup = "shell.run('meautocraft/meautocraft.lua')",
         files = {
-            {link="https://raw.githubusercontent.com/Seniorendi/Lua-Projects/master/src/ME%20Autocraft/meautocraft.lua", name = "meautocraft.lua", type = "program"},
+            {link="https://raw.githubusercontent.com/Messiah7/Lua-Projects/master/src/ME%20Autocraft/meautocraft.lua", name = "meautocraft.lua", type = "program"},
         },
         needs = {
             monitor = true,
@@ -36,8 +36,8 @@
         version = "1.0.0",
         startup = "shell.run('medrives/medrives.lua')",
         files = {
-            {link="https://raw.githubusercontent.com/Seniorendi/Lua-Projects/master/src/ME%20Drives/medrives.lua", name = "medrives.lua", type = "program"},
-            {link="https://raw.githubusercontent.com/Seniorendi/Lua-Projects/master/src/api/bars.lua", name = "bars.lua", type = "api"},
+            {link="https://raw.githubusercontent.com/Messiah7/Lua-Projects/master/src/ME%20Drives/medrives.lua", name = "medrives.lua", type = "program"},
+            {link="https://raw.githubusercontent.com/Messiah7/Lua-Projects/master/src/api/bars.lua", name = "bars.lua", type = "api"},
 
         },
         needs = {
