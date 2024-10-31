@@ -13,7 +13,7 @@ As example the automatic autocraft script for the me bridge
 
 - First you want to install the installer:
 
-`wget https://raw.githubusercontent.com/SirEndii/Lua-Projects/master/src/installer.lua installer`
+`wget https://raw.githubusercontent.com/Messiah7/Lua-Projects/master/src/installer.lua installer`
 
 - To see all currently available scripts, you can run `installer list`
 
