@@ -132,7 +132,8 @@ end
 
 prepareMon()
 
-while true do
+-- while true do
+function job()
     cpus = {}
     for k in pairs(me.getCraftingCPUs()) do
         table.insert(cpus, k)
@@ -172,3 +173,14 @@ while true do
     updateStats()
     sleep(1)
 end
+-- @PavelKom https://github.com/SirEndii/Lua-Projects/issues/7#issuecomment-2322801431
+while true do -- Infinite loop
+	local status, err = pcall(job) -- https://www.lua.org/pil/8.4.html
+	if not status then -- On error
+		me = peripheral.find(BRIDGE) -- Update ME Bridge
+		mon = peripheral.wrap(MONITOR) -- Update monitor
+		print(err)
+		sleep(1) 
+	end
+end
+
